@@ -1,0 +1,15 @@
+<h3>Products List</h3>
+<div class='card'>
+  <div class='card' *ngFor="let product of products">
+    <img class='card-img-top' *ngIf="product.imgUrl" [src]="product.imgUrl">
+    <h3 class='imgRep' *ngIf="!product.imgUrl">No Image Available.</h3>
+    <div class="card-body">
+      <h3 class='card-title'>{{product.title}}</h3>
+      <h3 class='card-text'>{{product.price | currency:US:true }}</h3>
+    </div>
+    <div class="card-footer">
+      <button class="edit" [routerLink]="['/products', 'edit', product.id]">EDIT</button>
+      <button class="delete" (click)="deleteProduct(product)">DELETE</button>
+    </div>
+  </div>
+</div>

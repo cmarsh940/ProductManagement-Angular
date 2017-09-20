@@ -1,0 +1,13 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<br>
+<div style="text-align:center">
+  <h1>{{title}}</h1>
+  <div class='container'>
+    <nav>
+      <button [routerLink]="['/']">Home</button>
+      <button [routerLink]="['/products']">Product List</button>
+      <button [routerLink]="['/products/new']">Product Creation</button>
+    </nav>
+</div>
+<br>
+<router-outlet></router-outlet>
